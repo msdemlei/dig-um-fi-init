@@ -20,7 +20,9 @@ zu haben.  Um ein neues Komitee einzubauen:
     Schreibzugriff auf das Repo gibt
 (2) ``git clone git@github.com:msdemlei/dig-um-fi-init.git``
 (3) ``git checkout -b add-my-committee``
-(4) ``cp template.tex my-committee.tex; git add my-committee.tex``
+(4) Die Datei (komiteename).tex fürs eigene Komitee öffnen, den Inhalt
+    von template.tex reinkopieren und editieren; natürlich kann die
+    innere Struktur geändert werden, wenn das wünschenwert ist.
 (5) Dinge beschreiben – die Leitfragen sind im template beschrieben,
     aber anderes kann natürlich immer rein.  Wer bereits fertige Texte
     auf Deutsch hat, kann die m.E. zunächst mal einfach so reinpasten.
