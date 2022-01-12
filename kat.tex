@@ -1,2 +1,41 @@
-% to start editing, read the content template.tex in here and start
-% editing.
+\section{KAT: Astroparticle Physics} 
+
+\sectauthor{John Bulava, DESY}
+
+
+The data produced in astroparticle physics observations is stored and 
+distributed in different ways. We here collect information from several 
+experiments to which scientists at DESY-Zeuthen belong. 
+
+For some established Gamma-ray observatories such as H.E.S.S. and
+VERITAS, data is stored conventionally at a few sites and is accessed
+and transferred conventionally using standard protocols/tools such as
+ssh, ftp, and Globus. While flexible and easy to implement and extend,
+this paradigm does not efficiently accommodate growing numbers of users,
+and relies on each user having explicit access to the site in question. 
+
+Other observatories, such as CTA (planned) and IceCube, make heavy use
+of the (US-based) OpenScienceGrid, as well as ad-hoc federated computing
+contributions from member institutions. OpenScienceGrid is based on
+GlideinWMS, which in turn uses HTCondor. Ad-hoc federation of smaller
+and heterogenous computing clusters at member institutions is provided
+by \url{https://github.com/WIPACrepo/pyglidein}, which also uses the
+HTCondor glidein mechanism to provision slots to a central pool.
+Software and other shared data resources are provisioned mainly through
+CVMFS. Data movement is handled by custom middleware using GridFTP as a
+transport.
+
+This federated model has many advantages, not least of which is an
+improvement in data transfer and computational throughput. Nonetheless,
+some users have difficulty navigating a heterogenous pool and adapting
+their workflows to different environments. Debug cycles can be extremely
+long, as there is often no direct line of contact between the person
+responsible for the workflow and the remote site administrator. Making
+effective use of opportunistic computing resources requires active and
+engaged site administrators, as well as clear service level agreements.
+
+Another (minor) disadvantage with the grid model is the cumbersome user
+identification process to obtain grid certificates. For the CTAO, the
+particular grid implmentation and access policy is as yet undecided, but
+four sites (of which DESY is one) have been designated as CTAO data
+centers. 
