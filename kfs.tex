@@ -17,15 +17,17 @@ data centre at DESY and have some ability to share resources.   The
 compute and storage systems are financed separately and are logically
 separated in the data centre even though they and share AAI
 infrastructure, file transfer services, tape archiving systems and the
-like.  Both run on GPFS for high speed storage and use dCache to manage
+like.  Both run on GPFS\todo{gloss?} for high speed storage and use dCache to manage
 tape archiving, use the same common login authentication and remote
 access gateways. Locate compute nodes within the shared Maxwell cluster.
 Opportunistic use of free CPU resources is possible as data from one
 facility can be processed on nodes owned by the other facility due to
 shared AAI and GPFS infrastructure; however, each facility gets priority
 over its own resources when needed.  The arrangement is better described
-as symbiotic co-existence than a true federation of resources. 
+as symbiotic co-existence than a true federation of resources.\todo{This
+sounds as if it weren't terribly far from KET in terms of tech.  Is that
+true?}
 
 
 The resources provided to the user community at their home institutions
-(Universities, MPG, industry) is definitely not federated. 
+(Universities, MPG, industry) are definitely not federated. 

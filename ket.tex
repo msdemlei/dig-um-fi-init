@@ -16,7 +16,8 @@ grid. It consists of around 170 computing centers in more than 40
 countries.  It is supported by many associated national and
 international grids across the world, such as European Grid
 Infrastructure (EGI) and Open Science Grid (OSG), based in the US, as well as many other
-regional grids.  The WLCG consists of four layers, or ``tiers''; 0, 1, 2
+regional grids\todo{Are these two federated?  If so, what are the
+experiences?  If not, why not?}.  The WLCG consists of four layers, or ``tiers''; 0, 1, 2
 and 3. Each tier provides a specific set of services. The Tier 0 is at
 CERN and is responsible for the safe-keeping of the raw data (first
 copy). Thirteen Tier 2\todo{That should be 1, right?} centers are responsible for a proportional
@@ -27,10 +28,8 @@ institutes, which can store sufficient data and provide adequate
 computing power for specific analysis tasks. They handle analysis
 requirements and proportional share of simulated event production and
 reconstruction.
-
-\todo{Add descriptions of other federated infrastructures in HEP???}
-
-\todo{Add descriptions of KHUK ???}
+\todo{Orig: Add descriptions of other federated infrastructures in HEP?
+Add descriptions of KHUK?}
 
 
 \subsection{Technologies Employed}
@@ -39,7 +38,7 @@ physics analysis software. The most important middleware stacks used
 in the WLCG are from the European Middleware Initiative, which
 combines several middleware providers (ARC, gLite, UNICORE and
 dCache); the Globus Toolkit developed by the Globus Alliance; and the
-Virtual Data Toolkit. 
+Virtual Data Toolkit.\todo{some of those: gloss?}
 
 
 
@@ -49,7 +48,8 @@ increase dramatically with the upcoming high-luminosity phase of the
 collider. Compared to 2016, an increase of computing resources by a
 factor of 60 will be needed. However, assuming a flat budget, the
 increase through improved technologies is expected to be only 6 to 10. Also the
-experiments at FAIR and and new large scale projects in astro-particle
+experiments at FAIR\todo{Is that the FAIR-FAIR, and if so, what part of
+it would be an experiment?} and and new large scale projects in astro-particle
 physics will have similar requirements. 
 
 To meet these challenges, new technologies for the access and use of
@@ -58,7 +58,8 @@ technologies evolve around the concept of a ``science cloud'' with the
 approach to implement complete infrastructures as services (IaaS,
 Infrastructure as a Service). This way, not only individual
 applications, but also complex infrastructures consisting of a
-multitude of services can be provided virtually. The resources to be
+multitude of services can be provided virtually\todo{How would that help
+with the large data volumes?}. The resources to be
 used are characterised through a great heterogeneity (see details in section
 \ref{lab:ketfed}). 
 
@@ -86,4 +87,4 @@ Materie) has started to work on common solutions to the challenges
 listed above. The pilot project IDT-UM (2017-2021) is being continued
 with the FIDIUM project (2021-2024), in which the intelligent
 techniques for abstraction, data management and accounting will be
-developed.\todo{ADD MORE DETAILS about technologies here?}
+developed.\todo{orig: Add more details about technologies here?}

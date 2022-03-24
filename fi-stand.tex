@@ -5,6 +5,8 @@
 \usepackage{xcolor}
 \usepackage[utf8]{inputenc}
 \usepackage{natbib}
+\usepackage[a4paper,hmargin={2cm,6cm},marginparwidth=5cm,
+  vmargin={2cm,3cm}]{geometry}
 \usepackage{todonotes}
 \bibliographystyle{agsm}
 \usepackage{mathpazo}
@@ -41,20 +43,89 @@ identify progress made as DIG-UM progresses.
 
 \section{Introduction}
 
-The following sections were written by topic group members nominated for
-the communities represented by the various committees.  They in
-particular try to answer the following questions:
+Part of DIG-UM's mission is to improve the interoperability of the
+research data infrastructures in German within the sectors of physics
+represented through ErUM-Data's committees.  It is the purpose of this
+paper to investigate what this can (or should) mean in practice.
+
+Interoperability between data services, the necessary condition of
+federation,  is of course a very desirable property from a user
+perspective.  Services with common interfaces mean that users will not
+have to learn new techniques when moving between services providers,
+that their software continues to work, quite typcially also that they
+get too choose between multiple implementations of a standard (e.g., in
+different languages, on the local machine vs.~in the ``cloud'', etc);
+very generally, interoperability reduces lock-in to particular service
+providers and thus also increases the ability of researchers to (re-)
+use data from different sources.  This is why interoperability is a
+pillar of the FAIR principles.
+
+For data providers and service operators, the consideration is more
+complex.  While it is true that once a standard is established and solid
+server-side software support exists, their implementation is generally
+simpler than a new design from the ground up.  On the other hand,
+establishing standards and writing portable, re-usable software is a
+major investment over a custom solution, and at least for standards not
+already well established or required by funding agencies, the PIs that
+data providers usually primarily talk to may actually prefer a custom
+solution, if only because offering their data for easy consumption by
+third parties is not a priority for many PIs.
+
+In the present case, the situation of the service operators is even more
+complicated, in that their ``customers'', the researchers, will, if at
+all, ask for ``vertical'' integration, i.e., interoperability with
+the standards established in their field, be they formally agreed or
+informally set by widely used software.  Since in both cases the
+standards are set within regional or global collaborations, they are
+disciplinary and international.
+
+Against that, DIG-UM's mandate, along with the BMBF's purview, is 
+horizontal federation, i.e., providing interoperability between
+infrastructures of different disciplines on the national level.
+
+In particular the tension between the somewhat natural vertical
+integration -- that has been going on for decades in many disciplines --
+and the horizontal integration resulting from a political mandate makes
+it very desirable to establish, at the beginning of DIG-UM's activities:
 
 \begin{itemize}
-\item Which federated infrastructures are already operated in the
-respective communites?
+\item Which infrastructures are already operated in the
+respective communites?  Which of them are already part of international,
+vertical federations (and thus perhaps less malleable)?
+
 \item Which technologies are being used in federation and service
-provision?
+provision?  This is particularly interesting because compatible
+fundamental technologies might lead the way to particularly low-hanging
+fruit.
+
 \item What are the experiences with these infrastructures?  Are there
 lessons learned?
+
 \item Which further infrastructures should be made interoperable and/or
-federated?  What should be enabled by the federation?
+federated, whether horizontally or vertically?
+
+\item What do we want to enable by fostering horizontal (i.e., on the
+national level) integration?  Can we write stories showing the
+benefits this will bring to our current or future users?
+
+\item Are there criteria to decide when horizontal integration is
+beneficial (e.g., common requirements or technologies) and when the
+problems (e.g., necessarily different metadata schemes, entirely
+disjunct workflows) outweigh possible benefits?
 \end{itemize}
+
+The body of this paper is written by topic group members nominated for
+the communities represented by the various committees, trying a --
+necessarily subjective -- survey of the state of play in the various
+disciplines.  This survey will then inform some preliminary conclusions
+in sect.~\ref{sect:conclusions}.
+
+The material here occasionally needs to be technical, and
+discipline-specific jargon can not always be avoided.  We hope the
+glossary\todo{I've made a few ``gloss?'' points below where I think
+having a glossary item would be particularly welcome; remember: this
+will typcially be read by non-experts.} in appendix~\ref{app:glossary} will help establishing a common
+background.
 
 \input kat
 
@@ -71,4 +142,10 @@ federated?  What should be enabled by the federation?
 \input khuk
 
 \input rds
+
+\input conclusions
+
+\appendix
+
+\input glossary
 \end{document}

@@ -14,15 +14,17 @@ ssh, ftp, and Globus. While flexible and easy to implement and extend,
 this paradigm does not efficiently accommodate growing numbers of users,
 and relies on each user having explicit access to the site in question. 
 
-Other observatories, such as CTA (planned) and IceCube, make heavy use
+Other observatories, such as CTA\todo{gloss?} (planned) and IceCube, make heavy use
 of the (US-based) OpenScienceGrid, as well as ad-hoc federated computing
 contributions from member institutions. OpenScienceGrid is based on
 GlideinWMS, which in turn uses HTCondor. Ad-hoc federation of smaller
 and heterogenous computing clusters at member institutions is provided
 by \url{https://github.com/WIPACrepo/pyglidein}, which also uses the
-HTCondor glidein mechanism to provision slots to a central pool.
+HTCondor glidein mechanism to provision slots to a central pool\todo{I'd
+be curious about this: what do people do with this, how many do
+participate?}.
 Software and other shared data resources are provisioned mainly through
-CVMFS. Data movement is handled by custom middleware using GridFTP as a
+CVMFS\todo{gloss?}. Data movement is handled by custom middleware using GridFTP as a
 transport.
 
 This federated model has many advantages, not least of which is an
@@ -38,4 +40,5 @@ Another (minor) disadvantage with the grid model is the cumbersome user
 identification process to obtain grid certificates. For the CTAO, the
 particular grid implementation and access policy is as yet undecided, but
 four sites (of which DESY is one) have been designated as CTAO data
-centers. 
+centers.\todo{Can you comment on how all this relates to CERN tech and KET
+already?}

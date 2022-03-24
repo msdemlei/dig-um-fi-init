@@ -1,4 +1,5 @@
 \section{RDS: Astronomy and Astrophysics}
+\label{sect:rds}
 
 \sectauthor{Markus Demleitner, Univ.~Heidelberg}
 
@@ -114,7 +115,7 @@ VO users.
 \subsection{Technologies Employed}
 
 Central to most of what the VO does are relational databases -- most
-projects run Postgres, but there but many other RDBMSes are in use, too.
+projects run Postgres, but many other RDBMSes are in use, too.
 This is partly because a relevant part of our science data
 (``catalogues'') is relational in nature, partly because our discovery
 interfaces for datasets are written in terms of relational
@@ -159,7 +160,9 @@ Right now, observatories facing the problem of data that is hard to move
 tend to offer services based on containers or ipython backends, but of
 course these are neither interoperable (in the sense that a, say,
 ipython notebook could be easily transferred from one service to
-another) nor discoverable.
+another) nor discoverable, and at least compared with ADQL queries (that
+will still work even if they were written 10 years ago) they will break
+rather quickly due to evolving dependencies.
 
 On thing we are still struggling with was the early design of
 identifying data collections and services, where, say, a collection of
