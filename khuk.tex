@@ -4,7 +4,7 @@
 
 \subsection{Existing Federated Infrastructures}
 In particular the large KHuK experiments ALICE at the Large Hadron Collider (LHC) at CERN
-and the FAIR experiments at GSI in Darmstadt have experienced a dramatic inflation of both the amount of
+and the FAIR\todo{gloss! (as opposed to Findable,...)} experiments at GSI in Darmstadt have experienced a dramatic inflation of both the amount of
 data and the required resources to process them. 
 Both the ALICE experiment during LHC Run 3 and the CBM experiment at FAIR will take data in the order of magnitude of TB/s.
 Online event selection will be done via large compute facilities on site, e.g. the Green IT Cube at GSI,
@@ -20,7 +20,8 @@ countries.  It is supported by many associated national and
 international grids across the world, such as European Grid
 Infrastructure (EGI) and Open Science Grid (OSG), based in the US, as well as many other
 regional grids.  The WLCG consists of four layers, or ``tiers''; 0, 1, 2
-and 3. Each tier provides a specific set of services. The Tier 0 is at
+and 3\todo{It would be great if the grid-using communities would discuss
+that once and then refer to that one discussion}. Each tier provides a specific set of services. The Tier 0 is at
 CERN and is responsible for the safe-keeping of the raw data (first
 copy). The large Tier 1 centers are responsible for a proportional
 share of raw and reconstructed data, large-scale reprocessing and
@@ -39,7 +40,9 @@ physics analysis software. The most important middleware stacks used
 in the WLCG are from the European Middleware Initiative, which
 combines several middleware providers (ARC, gLite, UNICORE and
 dCache); the Globus Toolkit developed by the Globus Alliance; and the
-Virtual Data Toolkit. The ALICE experiment is using the middleware AliEn.
+Virtual Data Toolkit. The ALICE experiment is using the middleware
+AliEn\todo{Are the different ``middlewares'' (what do they do, btw?) an
+accident or by design?}.
 The storage middleware which is used by ALICE for data storage and data transfer is XRootD.
 This is to some extend also in use by GSI/FAIR experiments.
 Analysis frameworks of the large KHuK experiments are usually based on the CERN analysis framework ROOT.
@@ -51,7 +54,8 @@ In the realm of LHC computing, the data volume and complexity will
 increase dramatically with the upcoming high-luminosity phase of the
 collider. Compared to 2016, an increase of computing resources by a
 factor of 60 will be needed. However, assuming a flat budget, the
-increase through improved technologies is expected to be only 6 to 10. 
+increase through improved technologies is expected to be only 6 to
+10.\todo{merge with KET?} 
 For ALICE a significant increase of data volume and complexitiy is already starting now, with
 LHC Run 3.
 Also the
@@ -109,10 +113,12 @@ to allow the use of a multitude of resources spread across multiple
 locations without the requirement for special expertise by the local user
 community. The use of more federated and commonly used resources will
 also allow to use them in a more flexible way to increase the
-utilization and occupancy of resources. 
+utilization and occupancy of resources.\todo{Anything on archiving?  Or
+is that always zenodo anyway and that's enough?}
 
 \subsection{First approaches for solutions, future technologies}
-Since 2017 the German ErUM community (Erforschung von Universum und
+Since 2017 the German ErUM community (Erforschung von Universum
+und\todo{Merge with ket?}
 Materie) has started to work on common solutions to the challenges
 listed above. The pilot project IDT-UM (2017-2021) is being continued
 with the FIDIUM project (2021-2024), in which the intelligent
