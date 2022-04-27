@@ -1,0 +1,33 @@
+\section{KFS: Synchrotron Radiation}
+
+\sectauthor{Anton Barty, DESY}
+
+The photon science large scale facilities maintain largely separate
+computing infrastructure located and maintained on-site at each of the
+facilities.   This is largely historical as computing services have
+grown locally as detector demands increased, linked to local data
+acquisition and driven by separate funding streams for each of the
+facilities.  Computing has been seen as a part of the local facility
+infrastructure rather than a federated service across infrastructures.
+Each facility has its own hardware, login and job scheduling systems. 
+
+
+That said – DESY and the European XFEL host their hardware in the same
+data centre at DESY and have some ability to share resources.   The
+compute and storage systems are financed separately and are logically
+separated in the data centre even though they and share AAI
+infrastructure, file transfer services, tape archiving systems and the
+like.  Both run on GPFS\todo{gloss?} for high speed storage and use dCache to manage
+tape archiving, use the same common login authentication and remote
+access gateways. Locate compute nodes within the shared Maxwell cluster.
+Opportunistic use of free CPU resources is possible as data from one
+facility can be processed on nodes owned by the other facility due to
+shared AAI and GPFS infrastructure; however, each facility gets priority
+over its own resources when needed.  The arrangement is better described
+as symbiotic co-existence than a true federation of resources.\todo{This
+sounds as if it weren't terribly far from KET in terms of tech.  Is that
+true?}
+
+
+The resources provided to the user community at their home institutions
+(Universities, MPG, industry) are definitely not federated. 

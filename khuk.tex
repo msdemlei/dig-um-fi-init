@@ -1,0 +1,138 @@
+\section{KHuK: Hadron and Nuclear Physics}
+
+\sectauthor{Kilian Schwarz, GSI}
+
+\subsection{Existing Federated Infrastructures}
+In particular the large KHuK experiments ALICE at the Large Hadron Collider (LHC) at CERN
+and the FAIR\todo{gloss! (as opposed to Findable,...)} experiments at GSI in Darmstadt have experienced a dramatic inflation of both the amount of
+data and the required resources to process them. 
+Both the ALICE experiment during LHC Run 3 and the CBM experiment at FAIR will take data in the order of magnitude of TB/s.
+Online event selection will be done via large compute facilities on site, e.g. the Green IT Cube at GSI,
+using a number of cores in the order of magnitude of 100.000 complemented by GPUs for real time reconstruction
+so that in the end data of the order of magnitude of 100 PB will be stored to disk.
+
+ALICE data are being distributed and processed by using the WLCG infrastructure. 
+The Worldwide LHC Computing Grid (WLCG) project has
+been founded to handle and process the data produced by the LHC
+experiments. Still today  the WLCG is the world's largest computing
+grid. It consists of around 170 computing centers in more than 40
+countries.  It is supported by many associated national and
+international grids across the world, such as European Grid
+Infrastructure (EGI) and Open Science Grid (OSG), based in the US, as well as many other
+regional grids.  The WLCG consists of four layers, or ``tiers''; 0, 1, 2
+and 3\todo{It would be great if the grid-using communities would discuss
+that once and then refer to that one discussion}. Each tier provides a specific set of services. The Tier 0 is at
+CERN and is responsible for the safe-keeping of the raw data (first
+copy). The large Tier 1 centers are responsible for a proportional
+share of raw and reconstructed data, large-scale reprocessing and
+safe-keeping of corresponding output, as well as distribution of data to Tier
+2s. The Tier 2s are typically universities and other scientific
+institutes, which can store sufficient data and provide adequate
+computing power for specific analysis tasks. They handle analysis
+requirements and proportional share of simulated event production and
+reconstruction.
+
+
+
+\subsection{Technologies Employed}
+Currently the WLCG defines four component layers,  networking, hardware, middleware and
+physics analysis software. The most important middleware stacks used
+in the WLCG are from the European Middleware Initiative, which
+combines several middleware providers (ARC, gLite, UNICORE and
+dCache); the Globus Toolkit developed by the Globus Alliance; and the
+Virtual Data Toolkit. The ALICE experiment is using the middleware
+AliEn\todo{Are the different ``middlewares'' (what do they do, btw?) an
+accident or by design?}.
+The storage middleware which is used by ALICE for data storage and data transfer is XRootD.
+This is to some extend also in use by GSI/FAIR experiments.
+Analysis frameworks of the large KHuK experiments are usually based on the CERN analysis framework ROOT.
+ROOT provides also the file structure in which the data are being stored.
+
+
+\subsection{Current Issues, future challenges}
+In the realm of LHC computing, the data volume and complexity will
+increase dramatically with the upcoming high-luminosity phase of the
+collider. Compared to 2016, an increase of computing resources by a
+factor of 60 will be needed. However, assuming a flat budget, the
+increase through improved technologies is expected to be only 6 to
+10.\todo{merge with KET?} 
+For ALICE a significant increase of data volume and complexitiy is already starting now, with
+LHC Run 3.
+Also the
+experiments at FAIR  and and new large scale projects in astro-particle
+physics will have similar requirements. 
+
+To meet these challenges, new technologies for the access and use of
+existing and future computing resources will be needed. The new
+technologies evolve around the concept of a ``science cloud'' with the
+approach to implement complete infrastructures as services (IaaS,
+Infrastructure as a Service). This way, not only individual
+applications, but also complex infrastructures consisting of a
+multitude of services can be provided virtually. 
+
+One central point is to optimise the computing models and infrastructures in place.
+The idea is to concentrate data storage on a few large centres interconnected with high speed bandwidth.
+This central data cloud is to be accessible in a transparent and efficient way by heterogenous compute infrastructures 
+consisting of classic pleged Grid resources, but also opportunistic and heterogeneous resources as HPC centres and Cloud infrastructures,
+which is where the virtualisation techniques mentioned above need to come into place.
+In addition dynamic disk caches need to be provided in order to provide efficient data access from opportunistic resources and also
+in order to reduce operation cost since simple caches require less maintenance work than full pledged storage elements.
+Also efficient resource usage would increas by providing central and larger compute and storage facilites which can be jointly used by
+several scientific communities.
+
+Moreover due to the possibilities provided by modern bandwidths and access protocols the tasks being applied
+to individual tier centres in WLCG become more complex and flexible.
+
+One way ALICE and FAIR are addressing the challanges provided by the necessity to process huge amounts of data
+in short time is to process a significant amount of these data already at the online compute facilities O2 and the Green IT Cube on site.
+In addition to that ALICE is providing dedicated Analysis Facilities to the community which are optimised for high speed data processing,
+such as the GSI Analysis facility.
+
+In order to make efficient use of accelerators as GPUs the experiment code needs to be adapted.
+
+One challenge also for the large KHuK experiments is to do data management and data analysis following the {\em FAIR} principles.
+Open data, open science, and community overarching data analysis is a central challenge which needs to be addressed.
+
+Another central challenge for KHuK is the support of the many small experiments and communities.
+They are by far not as far as the larger experiments in using federated computing and storage infrastructures,
+applying {\em FAIR principles} and also in corresponding software development.
+
+\subsection{Infrastructures to be Federated \label{lab:ketfed} }
+The resources to be used consist of installations with dedicated CPU
+and storage systems at large computing centers, but also analysis
+farms at smaller institutes as well as only temporarily available
+resources at partner instutions and HPC centers (including
+supercomputing resources of the Gauss-alliance). But also commercial
+cloud systems and cloud access at universities and research facilities
+need to be included. The use of GPU clusters is an attractive option
+that is investigated as well. For the efficient and robust operation
+of experiment specific software at such a variety of heterogeneous
+resources a high level of abstraction of work flows is required and
+the development of dedicated software tools is needed. This is needed
+to allow the use of a multitude of resources spread across multiple
+locations without the requirement for special expertise by the local user
+community. The use of more federated and commonly used resources will
+also allow to use them in a more flexible way to increase the
+utilization and occupancy of resources.\todo{Anything on archiving?  Or
+is that always zenodo anyway and that's enough?}
+
+\subsection{First approaches for solutions, future technologies}
+Since 2017 the German ErUM community (Erforschung von Universum
+und\todo{Merge with ket?}
+Materie) has started to work on common solutions to the challenges
+listed above. The pilot project IDT-UM (2017-2021) is being continued
+with the FIDIUM project (2021-2024), in which the intelligent
+techniques for abstraction, data management and accounting will be
+developed. IDT-UM started developing overlay batch systems via which dynamic science clouds
+can be brought into existence. In addition to that dynamic disk caching systems have been
+developed so that a first step for efficient data analysis via dynamic science clouds has been done.
+These works are to be continued in the FIDIUM project. Central tasks here are
+ongoing development of the overlay batch system including data aware scheduling, to provide 
+compute sites in a box with minimum administrative overhead as well as accounting and monitoring tools.
+A second field of development are real time monitoring systems for data lakes,
+efficient integration of dynamic disk caches and usage of parallel ad hoc file systems as caches in HPC centres.
+This will be complemented by data replication and placement methods for data lakes and usage
+driven data management and access methods. Based on these developments prototype data lakes will be provided.
+Another central point is tests, documentation and generalisation of production and analysis environments.
+
+% editing.
