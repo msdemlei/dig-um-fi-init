@@ -9,7 +9,7 @@ distributed in different ways.
 In its methodological approaches to analysis, astroparticle physics is very close to experimental particle and nuclear physics, but the results are often interpreted by astronomical approaches. Similarly, computing and its requirements are very diverse. 
 
 In opposite to particle physics, e.g., astroparticle physics is
-characterised by its globally distributed and diverse infrastructures. 
+characterised by its globally distributed and diverse infrastructures.\todo{CW: HEP is also globallz distributed and has diverse infrastructures. Unclear...} 
 The major infrastructures currently in Germany contributing to Big Data and Big Computing requests are the Gamma-ray Astronomy
 Observatory CTA, the Cosmic Ray experiment Pierre Auger Observatory,
 the Neutrino Observatory IceCube, the future gravitational wave detector Einstein-Telescope, the future Dark Matter experiment DARWIN emerging from XENONnT, the neutrino mass experiment KATRIN, and the Double Beta Decay
@@ -18,10 +18,10 @@ Information is obtained in particular by linking the
 data of different experiments (Multi-Messenger Astroparticle Physics), in
 which the digitalization of the research field plays an important role. 
 
-Each of these research infrastructures have their own computing concept, but often a co-use of the WLCG centers at the research centers and individual Universities with particle physics is in place.  \\
+Each of these research infrastructures has its own computing concept, but often a co-use of the WLCG centers at the research centers and individual Universities with particle physics involvement.  \\
 
  
-For some established observatories such as H.E.S.S. or the Pierre Auger Observatory, data is stored conventionally at a few sites and is accessed and transferred conventionally using standard protocols/tools such as ssh, ftp, and Globus. 
+For some established observatories such as H.E.S.S. or the Pierre Auger Observatory, data is stored conventionally at a few sites and is accessed and transferred conventionally using standard protocols/tools such as ssh, ftp, and Globus\todo{CW: Globus is Globus online?}. 
 While flexible and easy to implement and extend,
 this paradigm does not efficiently accommodate growing numbers of users,
 and relies on each user having explicit access to the site in question. 
@@ -35,14 +35,14 @@ CVMFS\todo{gloss?}. Data movement is handled by custom middleware using GridFTP 
 
 These concepts have worked until now, as the demands on funded data centres have been negligible compared to the use by particle physics.
 In this framework the astroparticle physics community has gained experiences in using Tier-1 and Tier-2 /Tier-3 HTC centers as well as operation and first use of specific HPC centres (in particular for the existing gravitational wave detectors).
-However, this will change within the current decade, as new and large infrastructures will come into operation and astroparticle physics will also move into the area of ExaByte Data management.
+However, this will change within the current decade, as new and large infrastructures will come into operation and astroparticle physics will also move into the area of ExaByte data management.
 
 
 \subsection{Current Issues, Future Challenges}
 
 The federated model (as foreseen for the most future research facilities in astroparticle physics) has many advantages, not least of which is an
 improvement in data transfer and computational throughput. 
-Nonetheless,some users have difficulty navigating a heterogeneous pool and adapting their workflows to different environments. 
+Nonetheless, some users have difficulty navigating through a heterogeneous pool of resources and adapting their workflows to different environments. 
 Debug cycles can be extremely long, as there is often no direct line of contact between the person responsible for the workflow and the remote site administrator. 
 Making effective use of opportunistic computing resources requires active and engaged site administrators, as well as clear service level agreements.
 
@@ -55,14 +55,14 @@ already?} \\
 
 Astroparticle physics and its scientists have to be integrated in the modern FAIR data live cycle where the federated infrastructures are an important pillar for an efficient computing concept.
 
-Federated infrastructures requires to consist of dedicated CPU
+Federated infrastructures are required to consist of dedicated CPU
 and storage systems at large computing centers, but also analysis
 resources as well as access and  available
-resources at supercomputers and HPC centers.
+resources at HPC centers.
 This includes also commercial cloud systems and extended GPU clusters.
 In addition, for an efficient and robust combination of data from different observatories (multi-messenger approach) operation
 of specific software adapted to the needs of astroparticle physics and further development of dedicated software tools is needed.
-Here, too, sustainable synergies with other communities - especially with particle physics - can be achieved. However, this requires the will and support of all sides to adapt the already existing solutions to the specific requirements of astroparticle physics. 
+Here, too, sustainable synergies with other communities - especially with particle physics - can be achieved. However, this requires the willingness  and support of all sides to adapt the already existing solutions to the specific requirements of astroparticle physics. 
 
 
 
@@ -70,16 +70,16 @@ Here, too, sustainable synergies with other communities - especially with partic
 
 The various challenges described could be countered by the concept of a variable data lake. 
 
-After a more detailed needs and gap analysis, a next step could be to 
-develop data lake (eventually based on XRootD) where a real-time monitoring component needs to be included. 
-Extended data storage systems with a flexible access and authorisation system used in the Data-Lake, as well as corresponding protocols, needs to be developed. 
+After a more detailed needs and gap analysis, a next step could be the
+development of a data lake (eventually based on XRootD) where a real-time monitoring component needs to be included. 
+Extended data storage systems with a flexible access and authorisation system used in the data lake, as well as corresponding protocols, need to be developed. 
 All existing data sources, including data from astroparticle physics observatories, must be efficiently integrated into the data lake via open protocols. It must also be possible to easily integrate existing computing systems into the built-up data lake prototypes, including the globally distributed WLCG computing system. 
 Therefore, techniques will be developed to integrate all existing computing resources, both dedicated experimental resources and opportunistic resources, HPC and cloud systems as well as dedicated analysis centres, to the data lake in a performant way. 
-Users from all community must be able to easily access the relevant data in the data lake. \\
+Users from all communities must be able to easily access the relevant data in the data lake. \\
 
 Whereas the astroparticle physics data lake can be integrated in a large-scale federated infrastructure, astroparticle physics needs in addition a dedicated infrastructure, where a cross-observatory analysis and data center is to be set up. 
-Structurally, this would be conceivable as a dedicated extension of a Tier 1
-center with a hardware requirement of approximately 1 to 2\,MEUR per year for the astroparticle physics n Germany.
+Structurally, this would be conceivable as a dedicated extension of a Tier-1
+center with a hardware requirement of approximately 1 to 2\,MEUR per year for the astroparticle physics in Germany.
 
 
 
