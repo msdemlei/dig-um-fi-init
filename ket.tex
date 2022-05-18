@@ -16,11 +16,11 @@ grid. It consists of around 170 computing centers in more than 40
 countries.  It is supported by many associated national and
 international grids across the world, such as European Grid
 Infrastructure (EGI) and Open Science Grid (OSG), based in the US, as well as many other
-regional grids\todo{Are these two federated?  If so, what are the
-experiences?  If not, why not?\\CW: OSG and EGI structures are transparentlty federated in WLCG.}.  The WLCG consists of four layers, or ``tiers''; 0, 1, 2
+regional grids, which are transparentlty federated in the WLCG.  
+This federation consists of four layers, or ``tiers''; 0, 1, 2
 and 3. Each tier provides a specific set of services. The Tier-0 is at
 CERN and is responsible for the safe-keeping of the raw data (first
-copy). Thirteen Tier-1\todo{That should be 1, right?\\CW: yes, fixed} centers are responsible for a proportional
+copy). Thirteen Tier-1 centers are responsible for a proportional
 share of raw and reconstructed data, large-scale reprocessing and
 safe-keeping of corresponding output, distribution of data to Tier-2s.\todo{The roles of T1 and T2 have become more and more equal.} The Tier-2s are typically universities and other scientific
 institutes, which can store sufficient data and provide adequate
@@ -35,7 +35,7 @@ Add descriptions of KHUK?}
 Currently the WLCG defines four component layers,  networking, hardware, middleware and
 physics analysis software. The most important middleware stacks used
 in the WLCG are from the European Middleware Initiative, which
-combines several middleware providers (ARC, gLite, UNICORE\todo{UNICORE is of no relevance for WLCG, basically no gLite component is used nawadays.} and
+combines several middleware providers (ARC, gLite, UNICORE\todo{UNICORE is of no relevance for WLCG, basically no gLite component is used nowadays.} and
 dCache); the Globus Toolkit developed by the Globus Alliance; and the
 Virtual Data Toolkit.\todo{some of those: gloss?}
 
@@ -45,10 +45,12 @@ Virtual Data Toolkit.\todo{some of those: gloss?}
 In the realm of LHC computing, the data volume and complexity will
 increase dramatically with the upcoming high-luminosity phase of the
 collider. Compared to 2016, an increase of computing resources by a
-factor of 60 will be needed \todo{The factor 60 would be required, if the Run2 computing model is extrapolated to Run4. New models forecast a much smaller gap}. However, assuming a flat budget, the
+factor of 60 will be needed \todo{The factor 60 would be required, if
+the Run2 computing model is extrapolated to Run4. New models forecast a
+much smaller gap.\\MD: who'll fix this passage?}. However, assuming a flat budget, the
 increase through improved technologies is expected to be only 6 to 10. Also the
-experiments at FAIR\todo{Is that the FAIR-FAIR, and if so, what part of
-it would be an experiment?\\CW: This is the FAIR facility at GSI.} and and new large scale projects in astro-particle
+experiments at the GSI FAIR facility
+and and new large scale projects in astro-particle
 physics will have similar requirements. 
 
 To meet these challenges, new technologies for the access and use of
@@ -58,7 +60,9 @@ approach to implement complete infrastructures as services (IaaS,
 Infrastructure as a Service). This way, not only individual
 applications, but also complex infrastructures consisting of a
 multitude of services can be provided virtually\todo{How would that help
-with the large data volumes?\\CW: Not al all! To safe data volume one needs smaller data tiers and smarter replica management.}. The resources to be
+with the large data volumes?\\CW: Not al all! To save data volume one
+needs smaller data tiers and smarter replica management.\\MD: Could you
+explan that in the text?}. The resources to be
 used are characterised through a great heterogeneity (see details in section
 \ref{lab:ketfed}). 
 
