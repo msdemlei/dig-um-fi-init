@@ -8,8 +8,8 @@ The data produced in astroparticle physics observations is stored and
 distributed in different ways. 
 In its methodological approaches to analysis, astroparticle physics is very close to experimental particle and nuclear physics, but the results are often interpreted by astronomical approaches. Similarly, computing and its requirements are very diverse. 
 
-In opposite to particle physics, e.g., astroparticle physics is
-characterised by its globally distributed and diverse infrastructures.\todo{CW: HEP is also globally distributed and has diverse infrastructures. Unclear...} 
+Compared to, e.g., high energy physics, astroparticle physics has
+wider set of diverse tool chains, data sources, and observatories.
 The major infrastructures currently in Germany contributing to Big Data and Big Computing requests are the Gamma-ray Astronomy
 Observatory CTA, the Cosmic Ray experiment Pierre Auger Observatory,
 the Neutrino Observatory IceCube, the future gravitational wave detector Einstein-Telescope, the future Dark Matter experiment DARWIN emerging from XENONnT, the neutrino mass experiment KATRIN, and the Double Beta Decay
@@ -21,17 +21,17 @@ which the digitalization of the research field plays an important role.
 Each of these research infrastructures has its own computing concept, but often a co-use of the WLCG centers at the research centers and individual Universities with particle physics involvement.  \\
 
  
-For some established observatories such as H.E.S.S. or the Pierre Auger Observatory, data is stored conventionally at a few sites and is accessed and transferred conventionally using standard protocols/tools such as ssh, ftp, and Globus\todo{CW: Globus is Globus online?}. 
+For some established observatories such as H.E.S.S. or the Pierre Auger Observatory, data is stored conventionally at a few sites and is accessed and transferred conventionally using standard protocols/tools such as ssh, ftp, and Globus. 
 While flexible and easy to implement and extend,
 this paradigm does not efficiently accommodate growing numbers of users,
 and relies on each user having explicit access to the site in question. 
-Other observatories, such as CTA\todo{gloss?} (planned) and IceCube, make heavy use of the (US-based) OpenScienceGrid, as well as ad-hoc federated computing contributions from member institutions. 
+Other observatories, such as CTA (planned) and IceCube, make heavy use of the (US-based) OpenScienceGrid, as well as ad-hoc federated computing contributions from member institutions. 
 OpenScienceGrid is based on GlideinWMS, which in turn uses HTCondor. 
 Ad-hoc federation of smaller and heterogeneous computing clusters at member institutions is provided by \url{https://github.com/WIPACrepo/pyglidein}, which also uses the HTCondor glidein mechanism to provision slots to a central pool\todo{I'd
 be curious about this: what do people do with this, how many do
 participate?}.
 Software and other shared data resources are provisioned mainly through
-CVMFS\todo{gloss?}. Data movement is handled by custom middleware using GridFTP as a transport. \\
+CVMFS. Data movement is handled by custom middleware using GridFTP as a transport. \\
 
 These concepts have worked until now, as the demands on funded data centres have been negligible compared to the use by particle physics.
 In this framework the astroparticle physics community has gained experiences in using Tier-1 and Tier-2 /Tier-3 HTC centers as well as operation and first use of specific HPC centres (in particular for the existing gravitational wave detectors).
