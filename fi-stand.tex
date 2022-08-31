@@ -34,10 +34,11 @@ State of Play}
 As a first output of the DIG-UM Topic Group on Federated Infrastructures,
 this document tries to provide a concise and necessarily subjective
 overview of the state of play of digital research infrastructures in
-the domains covered by DIG-UM's eight committees.  Its main goal is to
-help the comittee members understand the practices and technologies
-already established in the other domains.  It may also be useful to
-identify progress made as DIG-UM progresses.
+the domains covered by DIG-UM's eight communities with a particular focus
+on Germany.  Its main goal is to
+help the community members to understand the practices and technologies
+already established in the participating domains.  It may also be useful to
+identify progress made as DIG-UM advances.
 
 \end{abstract}
 
@@ -52,16 +53,19 @@ Interoperability between data services, the necessary condition of
 federation,  is of course a very desirable property from a user
 perspective.  Services with common interfaces mean that users will not
 have to learn new techniques when moving between service providers,
-that their software continues to work, quite typicially also that they
+that their software continues to work as they use data and services from
+different sources, quite typically also that they
 get to choose between multiple implementations of a standard (e.g., in
 different languages, on the local machine vs.~in the ``cloud'', etc).
 Very generally, interoperability reduces lock-in to particular service
 providers and thus also increases the ability of researchers to (re-)
 use data from different sources.  This is why interoperability is a
-pillar of the FAIR principles.  An additional benefit of
+pillar of the FAIR\footnote{cf.~Wilkinson et al, 2016, ``The FAIR
+Guiding Principles for scientific data management and stewardship'',
+Scientific Data \textbf{3}, 160018.}  principles.  An additional benefit of
 interoperability is that it reduces the mental overhead on researchers
 when moving from one infrastructure to another, thereby making their
-research more efficient and increasing science output. 
+research more efficient and increasing science output.
 
 For data providers and service operators, the consideration is more
 complex.  While it is true that once a standard is established and solid
@@ -69,12 +73,13 @@ server-side software support exists, their implementation is generally
 simpler than a new design from the ground up.  On the other hand,
 establishing standards and writing portable, re-usable software is a
 major investment over a custom solution.  Where standards are not
-already well established or required by funding agencies, the PIs that
-data providers usually primarily talk to may actually prefer a custom
-solution, if only because offering their data for easy consumption by
+already well established or required by funding agencies, the Principal
+Investigators (PIs) of the projects that produce that data --
+it is these that service providers primarily talk to in the design phase
+-- may actually prefer a custom
+solution, for instance because offering their data for easy consumption by
 third parties is not a priority for many PIs.  Indeed, this step is
-often seen as an added cost unless required by the community (eg: PDB
-deposition for protein structures).
+often seen as an added cost unless required by the community.
 
 In the present case, the situation of the service operators is even more
 complicated, in that their ``customers'', the researchers, will, if at
@@ -82,37 +87,34 @@ all, ask for ``vertical'' integration, i.e., interoperability with
 the standards established in their field, be they formally agreed or
 informally set by widely used software.  Since in both cases the
 standards are set within regional or global collaborations, they are
-both specific to disciplinnes while at the same time international in
+both specific to disciplines while at the same time international in
 reach.
 
-Against that, DIG-UM's mandate, along with the BMBF's purview, is 
-horizontal federation, i.e., providing interoperability between
-infrastructures of different disciplines on the national level.
+Given that the Topic Group's mandate, along with the BMBF's 
+goals, is horizontal federation, i.e., making 
+infrastructures of different disciplines on the national level
+interoperable and then combining them into a seamless whole.  This
+concept of a Federated Science Cloud, consisting of computing,
+storage, and archive resources of all eight ErUM communities in Germany,
+certainly appears attractive.
 
-In particular the tension between the somewhat natural vertical
-integration -- that has been going on for decades in many disciplines --
-and the horizontal integration resulting from a political mandate makes
-it very desirable to establish, at the beginning of DIG-UM's activities:
+To establish that, the communities need to develop a common
+understanding of:
 
 \begin{itemize}
 \item Which infrastructures are already operated in the
-respective communites?  Which of them are already part of international,
-vertical federations (and thus perhaps less malleable)?
+respective communites?  Which of them are already part of international
+federations and bring along corresponding boundary conditions?
 
 \item Which technologies are being used in federation and service
 provision?  This is particularly interesting because compatible
-fundamental technologies might lead the way to particularly low-hanging
-fruit.
+fundamental technologies might lead the way to low-cost solutions.
 
 \item What are the experiences with these infrastructures?  Are there
 lessons learned?
 
 \item Which further infrastructures should be made interoperable and/or
-federated, whether horizontally or vertically?
-
-\item What do we want to enable by fostering horizontal (i.e., on the
-national level) integration?  Can we write stories showing the
-benefits this will bring to our current or future users?
+federated?
 
 \item Are there criteria to decide when horizontal integration is
 beneficial (e.g., common requirements or technologies) and when the
