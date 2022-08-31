@@ -2,32 +2,149 @@
 
 \sectauthor{Anton Barty, DESY}
 
-The photon science large scale facilities maintain largely separate
-computing infrastructure located and maintained on-site at each of the
-facilities.   This is largely historical as computing services have
-grown locally as detector demands increased, linked to local data
-acquisition and driven by separate funding streams for each of the
-facilities.  Computing has been seen as a part of the local facility
-infrastructure rather than a federated service across infrastructures.
-Each facility has its own hardware, login and job scheduling systems. 
+\subsection{State of federated infrastructures}
 
+The photon science large scale facilities generate significant raw data
+volumes and currently maintain largely separate computing infrastructure
+located on-site at each of the facilities. This is a result of the
+funding model whereby each facility is separately funded to support the
+computing needs of the facility users. 
 
-That said – DESY and the European XFEL host their hardware in the same
-data centre at DESY and have some ability to share resources.   The
+This development is largely historical. Computing services have grown
+locally as detector demands increased.  IT services are linked to local
+data acquisition where each facility is the ``Tier 0'' centre for data,
+and increasingly computing on that data.  Computing has been seen as a
+part of the local facility infrastructure rather than a federated
+service across infrastructures. Each facility has its own hardware,
+login and job scheduling systems.  Resourcing is driven by separate
+funding streams for each of the facilities.
+
+At the same time, DESY and the European XFEL host their hardware in the
+same data centre at DESY and have some ability to share resources. The
 compute and storage systems are financed separately and are logically
 separated in the data centre even though they and share AAI
 infrastructure, file transfer services, tape archiving systems and the
-like.  Both run on GPFS for high speed storage and use dCache to manage
+like. Both run on GPFS for high speed storage and use dCache	 to manage
 tape archiving, use the same common login authentication and remote
 access gateways. Locate compute nodes within the shared Maxwell cluster.
 Opportunistic use of free CPU resources is possible as data from one
 facility can be processed on nodes owned by the other facility due to
 shared AAI and GPFS infrastructure; however, each facility gets priority
-over its own resources when needed.  The arrangement is better described
-as symbiotic co-existence than a true federation of resources.\todo{This
-sounds as if it weren't terribly far from KET in terms of tech.  Is that
-true?}
+over its own resources when needed. The arrangement is better described
+as symbiotic co-existence than a true federation of resources.  The
+resources provided to the user community at their home institutions
+(Universities, MPG, industry) are definitely not federated
 
+\subsection{Already federated computing and storage infrastructures}
 
-The resources provided to the user community at their home institutions
-(Universities, MPG, industry) are definitely not federated. 
+Broadly speaking, the large scale facilities do not use federated
+computing and storage infrastructures.  The reason is that each facility
+is funded to provide storage and computing for the facility users, not
+the users of other facilities – and since there are always fewer
+resources than needed there are no spare resources to share.  A
+secondary reason is that high data volumes means that significant
+computing is needed on site anyway for stable data acquisition and
+prompt processing, necessitating some form of on-site data centre
+regardless of federation. 
+
+One example of shared infrastructure that does work is the Maxwell
+cluster at DESY.  Maxwell is a significant compute and storage resource
+located at DESY which serves the needs of both DESY photon science
+(FLASH/PETRA-III) and European XFEL, as well a heterogeneous collection
+of other researchers at DESY including the CryoEM user facility CSSB at
+DESY.   This facility is centrally located with each institution
+contributing resources for their respective user community.  Due to a
+common login and portal, shared use of resources is possible as data and
+servers from all institutions share a common entry point, AAI, disk
+space, tape archiving, etc.  In practice, each facility has priority use
+over it’s own resources and can make opportunistic use of resources from
+the other facilities when available.  Software and other infrastructure
+is shared, and since the cluster consists of heterogeneous resources it
+is possible to make use of specific configurations if needed (eg: large
+memory machines, multiple GPU machines, many-core machines, especially
+for testing). This model seems to work well largely because the
+facilities involved share the common computer centre at DESY. 
+
+There have been several initiatives overseas to make use of shared
+infrastructure for the photon science community, notable among which are
+the DOE facilities in the US, the SLS in Switzerland, and Max-IV in
+Sweden.  Here, the facilities were encouraged to use national
+supercomputing facilities for their offline and long-term computing
+needs, with mixed success.  
+
+In the US, for example, there was an initiative and pilot project for
+the DOE funded light sources to use the DOE-funded supercomputing
+facility at NERSC to process their data.  This ran into the following
+problems:
+
+\begin{itemize}
+\item The need for immediate experiment feedback necessitated significant on-site computing resources in any case
+\item Large amounts of data needed to be transported over large distances with high reliability.  One instrument at a light source can produce 1PB of data a day, and there may be 30 such instruments at one facility.  Data transport must be prompt and reliable.
+\item The access model for supercomputing facilities did not match the needs or expectations of photon science users (long job turnaround times of up to a week versus the expectation of short turnaround times for data optimisation and even interactive operation)
+\item The supercomputers themselves were optimised for calculation and not processing large volumes of data with high data throughput rates
+\item Using a supercomputer highly optimised for parallel computation to perform multiple small single-threaded jobs with little code optimisation from photon science users was realised to be a poor use of the supercomputing resources
+\item The knowledge barrier to entry into a supercomputing facility environment was largely above all but the most specialist research groups.  Simply put, the facility was designed to serve highly computer literate users, and not the heterogeneous set of non computer specialists in the photon science community.  It was simply too complex to use for most people, and too complex for their needs. 
+\end{itemize}
+
+The conclusion here is that such use of a central supercomputing
+facility such as already exists in many national infrastructures may be
+technically possible, but it is not necessarily well suited to the needs
+of the photon science community, nor is it necessarily a good match or
+good use of such a resource.
+
+\subsection{Current issues which need to be addressed}
+
+By and large, the Maxwell cluster at DESY works relatively well for
+experiments on site at DESY.  One could consider using an expanded
+version of such a resource as federated offline computing for all photon
+and neutron facilities in Germany.  This would have the benefit of
+common infrastructure, common environment and software stack, and a
+‘single point of entry’ for all national facility users.  It helps that
+most of the photon and neutron facilities in Germany fall under the same
+funding umbrella.  If designed to serve the photon and neutron community
+it may avoid the trap of trying to do absolutely everything for all
+communities.
+
+\subsection{Computing and storage infrastructures we would like to
+federate}
+
+The photon and Neutron communities are working together within the NFDI
+under the banner of Daphne4NFDI.  We therefore share several common
+views and goals on shared and federated infrastructure, including: 
+
+\begin{enumerate}
+\item AAI Allowing employees from other institutes and from the PaN
+community access in a transparent manner to photon science compute
+resources would be highly advantageous.  At the moment, each user
+requiring access to data or resources has to be granted an authenticated
+account.  This adds significant administrative overhead which could be
+avoided though data and compute access through authenticated AAI from
+the home institute. This was supposedly addressed as part of the
+UmbrellaID PaNData initiative. However, UmbrellaID has seen limited
+adoption outside of the proposal and user office systems, and is not
+used for authentication to data or compute infrastructure.  
+
+\item Storage Federating storage backends as done with the Maxwell
+cluster could save resources, particularly for long term archiving.  The
+requirements to preserve data are becoming onerous in terms of cost (due
+to the large data volumes involved) and a common solution could be
+highly advantageous. 
+
+\item Federated compute resources The Maxwell cluster at DESY has been
+rather successful and could be applied more widely to the PaN community,
+provided the issue of near-real-time WAN data transfer are addressed,
+and an appropriate funding model devised.   Note there would still be a
+need for onsite computing for real time feedback at each facility. 
+
+\item Standardised environments and software stacks would help users
+moving from facility to facility. 
+
+\item Data portal (scicat) The Scicat data portal allows users to search
+and access data from current and previous experiments. This should
+include electronic user log books and metadata capture.  Using the data
+portal ensures data is accessible according to the FAIR principles.
+Federating this tool will ensure data is searchable and accessible
+across multiple research institutes, in a coordinated and simplified
+manner.  We are currently working with the NFDI to try and harmonise
+this.
+\end{enumerate}
